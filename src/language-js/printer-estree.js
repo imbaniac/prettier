@@ -672,12 +672,12 @@ function printPathNoParens(path, options, print, args) {
                 "{",
                 indent(
                   concat([
-                    options.bracketSpacing ? line : softline,
-                    join(concat([",", line]), grouped)
+                    hardline,
+                    join(concat([",", hardline]), grouped)
                   ])
                 ),
                 ifBreak(shouldPrintComma(options) ? "," : ""),
-                options.bracketSpacing ? line : softline,
+                hardline,
                 "}"
               ])
             )
